@@ -27,7 +27,7 @@ ut_redis_host: ""
 ut_redis_port: 6379
 ut_redis_index: 1
 
-replicaCount: 10
+replicaCount: 2
 resources:
   requests:
     cpu: 100m
