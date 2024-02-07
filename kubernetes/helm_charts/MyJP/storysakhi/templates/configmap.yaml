@@ -18,6 +18,6 @@ data:
   TELEMETRY_LOG_ENABLED: "{{ .Values.telemetry_log_enabled }}"
   OPENAI_API_BASE: "{{ .Values.ss_openai_baseurl }}"
   OPENAI_API_VERSION: "{{ .Values.ss_openai_version }}"
-  GPT_MODEL: "{{ .Values.ss_gpt_model }}"
+  gpt_model: "{{ .Values.ss_gpt_model }}"
   DOCS_MIN_SCORE: "{{ .Values.ss_docs_min_score }}"
 
