@@ -17,5 +17,5 @@ data:
   TELEMETRY_LOG_ENABLED: "{{ .Values.telemetry_log_enabled }}"
   OPENAI_API_BASE: "{{ .Values.su_openai_baseurl }}"
   OPENAI_API_VERSION: "{{ .Values.su_openai_version }}"
-  GPT_MODEL: "{{ .Values.su_gpt_model }}"
+  gpt_model: "{{ .Values.su_gpt_model }}"
   
