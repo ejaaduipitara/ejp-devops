@@ -59,6 +59,6 @@
             "telemetryCreate"
         ],
         "state": "present",
-        "username": "exotel_user"
+        "username": "servetel_user"
     }
 ]
