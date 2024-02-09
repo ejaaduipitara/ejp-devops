@@ -6,7 +6,7 @@ metadata:
   annotations:
     reloader.stakater.com/auto: "true"
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.apimanagerConfig.replicaCount }}
   strategy:
     rollingUpdate:
       maxSurge: {{ .Values.strategy.maxsurge }}
