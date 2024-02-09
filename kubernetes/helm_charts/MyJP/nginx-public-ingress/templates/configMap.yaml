@@ -63,6 +63,20 @@ data:
         root /usr/share/nginx/html;
       }
 
+      location /ivrs-exotel {
+        rewrite ^/ivrs/(.*) /$1 break;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_set_header    X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_set_header X-Request-ID $sb_request_id;
+        proxy_pass http://exotel-ivrs-bot-service:8000;
+      }
+
+
 {{- if .Values.grafana.proxyenabled }}
       location /grafana {
         include /etc/nginx/defaults.d/compression.conf;
