@@ -1,0 +1,40 @@
+namespace: ""
+imagepullsecrets: ""
+dockerhub: ""
+
+ivrs_repository: "ivrs"
+image_tag: "latest"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
+network:
+  port: 8000
+  targetport: 8000
+strategy:
+  type: RollingUpdate
+  maxsurge: 25
+  maxunavailable: 25
+
+ivrs_config_url: ""
+ivrs_telemetry_api_url: "http://telemetry-service:9001/v1/telemetry"
+ivrs_env: "dev"
+ivrsConfig:
+  replicaCount: 1
+  autoscaleEnabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: ""
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 1
+      memory: 1024Mi
+
