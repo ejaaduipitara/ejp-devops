@@ -46,7 +46,7 @@ spec:
         image: "{{ .Values.dockerhub }}/{{ .Values.nginx_repository }}:{{ .Values.nginx_image_tag }}"
         imagePullPolicy: IfNotPresent
         resources:
-{{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.nginxConfig.resources | indent 10 }}
         volumeMounts:
           - name: proxy-config
             mountPath: /etc/nginx/defaults.d
