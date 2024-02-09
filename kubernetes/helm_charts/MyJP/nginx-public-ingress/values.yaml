@@ -33,7 +33,7 @@ imagepullsecrets: ""
 dockerhub: ""
 
 nginxConfig:
-  replicaCount: 1
+  replicaCount: 2
   autoscaleEnabled: false
   minReplicas: 1
   maxReplicas: 2
