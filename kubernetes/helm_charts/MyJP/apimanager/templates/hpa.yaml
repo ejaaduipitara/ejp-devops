@@ -3,8 +3,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ .Chart.Name }}
-  annotations:
-    meta.helm.sh/release-namespace: {{ .Release.namespace }}
+  namespace: {{ .Values.namespace }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -17,12 +16,16 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        targetAverageUtilization: {{ .Values.apimanagerConfig.targetCPUUtilizationPercentage }}
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.apimanagerConfig.targetCPUUtilizationPercentage }}
     {{- end }}
     {{- if .Values.apimanagerConfig.targetMemoryUtilizationPercentage }}
     - type: Resource
       resource:
         name: memory
-        targetAverageUtilization: {{ .Values.apimanagerConfig.targetMemoryUtilizationPercentage }}
+        target:
+          type: Utilization
+          averageUtilization: {{ .Values.apimanagerConfig.targetMemoryUtilizationPercentage }}
     {{- end }}
 {{- end }}
