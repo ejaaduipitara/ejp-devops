@@ -342,6 +342,9 @@
       "name": "cors"
     },
     {
+      "name": "jwt"
+    },
+    {
       "config.host": "statsd-service",
       "config.metrics": [
         {
