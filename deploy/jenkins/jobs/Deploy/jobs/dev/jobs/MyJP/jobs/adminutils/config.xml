@@ -137,7 +137,7 @@ return """&lt;b&gt;This parameter is not used&lt;/b&gt;"""</script>
         </hudson.plugins.git.extensions.impl.CloneOption>
       </extensions>
     </scm>
-    <scriptPath>kubernetes/pipelines/Jenkinsfile</scriptPath>
+    <scriptPath>kubernetes/pipelines/admin.Jenkinsfile</scriptPath>
     <lightweight>false</lightweight>
   </definition>
   <triggers/>
