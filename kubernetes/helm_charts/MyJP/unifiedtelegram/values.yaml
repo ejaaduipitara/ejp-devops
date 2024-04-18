@@ -10,7 +10,7 @@ activity_api_base_url: "http://activitysakhi-service:8000"
 story_api_base_url: "http://storysakhi-service:8000"
 
 ut_repository: "sakhi_telegram_unified_service"
-ut_image_tag: "latest"
+ut_image_tag: "r2.0.0"
 ut_log_level: "INFO"
 ut_telegram_bot_name: ""
 ut_telegram_bot_token: ""
