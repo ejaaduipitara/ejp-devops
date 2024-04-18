@@ -6,7 +6,7 @@ dockerhub: ""
 
 
 whatsapp_repository: "whatsappbot"
-whatsapp_image_tag: "latest"
+whatsapp_image_tag: "r2.0.0"
 wa_story_sakhi_endpoint_url: "http://storysakhi-service:8000/v1/query"
 wa_activity_sakhi_endpoint_url: "http://activitysakhi-service:8000/v1/query"
 wa_char_limit: "1024"
@@ -24,12 +24,7 @@ strategy:
 
 #{{ whatsappbot_liveness_readiness | to_nice_yaml }}
 
-wa_story_sakhi_endpoint_url: ""
-wa_activity_sakhi_endpoint_url: ""
-wa_char_limit: "1024"
 wa_netcore_token: "random1value"
-wa_telemetry_service_url: ""
-wa_port: "3010"
 wa_api_token: ""
 wa_bot_api_token: ""
 wa_provider_token: ""
