@@ -8,11 +8,15 @@ imagepullsecrets: ""
 dockerhub: ""
 
 as_repository: "activity_sakhi_api_service"
-as_image_tag: "latest"
+as_image_tag: "r2.0.0"
 as_log_level: INFO
 as_openai_baseurl: ""
 as_openai_version: ""
 as_gpt_model: ""
+as_config_ini_path: "config.ini"
+as_top_docs_to_fetch: "5"
+as_redis_port: 6379
+as_redis_db: 1
 
 network:
   port: 8000
