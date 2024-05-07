@@ -85,7 +85,7 @@ data:
         proxy_set_header Connection "";
         proxy_http_version 1.1;
         proxy_set_header X-Request-ID $sb_request_id;
-        proxy_pass http://static-website-service:8080;
+        proxy_pass http://dashboard-service:8080;
       }
 
       location /api/ {
