@@ -5,9 +5,9 @@ telemetry_log_enabled: "true"
 
 namespace: ""
 imagepullsecrets: ""
-dockerhub: "ghcr.io/sunbird-aiassistant"
+dockerhub: ""
 
-as_repository: "sakhi-api-service"
+as_repository: "activity_sakhi_api_service"
 as_image_tag: "3.0.0"
 as_log_level: INFO
 as_gpt_model: ""
