@@ -18,8 +18,6 @@ data:
   TELEMETRY_ENDPOINT_URL: "{{ .Values.telemetry_url }}"
   TELEMETRY_LOG_ENABLED: "{{ .Values.telemetry_log_enabled }}"
   LLM_TYPE: "{{ .Values.as_llm_type }}"
-  OPENAI_API_BASE: "{{ .Values.as_openai_baseurl }}"
-  OPENAI_API_VERSION: "{{ .Values.as_openai_version }}"
   GPT_MODEL: "{{ .Values.as_gpt_model }}"
   REDIS_HOST: "{{ .Values.as_redis_host }}"
   REDIS_DB: "{{ .Values.as_redis_db }}"
