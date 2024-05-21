@@ -1,11 +1,11 @@
 
 namespace: ""
 imagepullsecrets: devregistrysecrett
-dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
+dockerhub: ghcr.io/sunbird-aiassistant
 
 replicaCount: 1
 repository: "adminutil"
-image_tag: "release-4.5.0_RC3_68b1eaa_1"
+image_tag: "1.0.0"
 network:
   port: 4000
   targetport: 4000

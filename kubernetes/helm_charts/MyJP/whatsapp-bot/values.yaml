@@ -5,8 +5,8 @@ imagepullsecrets: ""
 dockerhub: ""
 
 
-whatsapp_repository: "whatsappbot"
-whatsapp_image_tag: "r2.0.0"
+whatsapp_repository: "whatsapp-bot"
+whatsapp_image_tag: "2.0.0"
 wa_story_sakhi_endpoint_url: "http://storysakhi-service:8000/v1/query"
 wa_activity_sakhi_endpoint_url: "http://activitysakhi-service:8000/v1/query"
 wa_char_limit: "1024"

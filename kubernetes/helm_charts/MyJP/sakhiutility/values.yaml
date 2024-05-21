@@ -7,8 +7,8 @@ namespace: ""
 imagepullsecrets: ""
 dockerhub: ""
 
-su_repository: "sakhi_utility_api_service"
-su_image_tag: "latest"
+su_repository: "sakhi-utility-api-service"
+su_image_tag: "1.0.0"
 su_log_level: "INFO"
 
 su_open_api_key: ""

@@ -6,7 +6,7 @@ imagepullsecrets: ""
 dockerhub: ""
 
 telemetry_repository: "djp-telemetry-service"
-telemetry_image_tag: "latest"
+telemetry_image_tag: "1.0.0"
 
 telemetry_pg_host: ""
 telemetry_pg_username: ""

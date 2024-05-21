@@ -2,7 +2,7 @@
 namespace:  # kubernetes namespace where the ejp workloads are going to be deployed
 kubeconfig_path: # Path to the kubeconfig file on Jenkins instance e.g. /var/lib/jenkins/secrets/k8s.yaml
 imagepullsecrets: devregistrysecret
-dockerhub: hyd.ocir.io/ax2cel5zyviy/ekstep-djp
+dockerhub: ghcr.io/sunbird-aiassistant
 
 
 #kong vars

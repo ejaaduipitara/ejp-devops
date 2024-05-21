@@ -3,7 +3,7 @@ imagepullsecrets: ""
 dockerhub: ""
 
 ivrs_repository: "ivrs"
-image_tag: "latest"
+image_tag: "1.0.0"
 
 resources:
   requests:

@@ -16,7 +16,7 @@ kong_trusted_ips: 0.0.0.0/0,::/0
 kong_upstream_keepalive: "200"
 
 imagepullsecrets: ""
-dockerhub: "hyd.ocir.io/ax2cel5zyviy/ekstep-djp"
+dockerhub: "ghcr.io/sunbird-aiassistant"
 
 replicaCount: 1
 repository: "djp-kong"
