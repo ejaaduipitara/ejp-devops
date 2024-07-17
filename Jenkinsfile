@@ -9,10 +9,11 @@ node() {
         ansiColor('xterm') {
             stage('Checkout') {
                 if (!env.hub_org) {
-                    println(ANSI_BOLD + ANSI_RED + "Uh Oh! Please set a Jenkins environment variable named hub_org with value as registery/sunbidrded" + ANSI_NORMAL)
+                    println(ANSI_BOLD + ANSI_RED + "Uh Oh! Please set a Jenkins environment variable named hub_org with value as registery/sunbirded" + ANSI_NORMAL)
                     error 'Please resolve the errors and rerun..'
-                } else
-                    println(ANSI_BOLD + ANSI_GREEN + "Found environment variable named hub_org with value as: " + hub_org + ANSI_NORMAL)
+                } else {
+                    println(ANSI_BOLD + ANSI_GREEN + "Found environment variable named hub_org with value as: " + env.hub_org + ANSI_NORMAL)
+                }
             }
             cleanWs()
 
@@ -22,18 +23,19 @@ node() {
             echo "build_tag: " + build_tag
 
             sh 'chmod +x ./build.sh'
-            
-            stage('Build'){
-                sh("./build.sh ${build_tag} ${env.NODE_NAME} ${hub_org}")
+
+            stage('Build') {
+                sh("./build.sh ${build_tag} ${env.NODE_NAME} ${env.hub_org}")
             }
 
             stage('ArchiveArtifacts') {
-                archiveArtifacts "metadata.json"
+                archiveArtifacts artifacts: "metadata.json"
                 currentBuild.description = "${build_tag}"
             }
         }
-    }
-    catch (err) {
+    } catch (err) {
         currentBuild.result = "FAILURE"
         throw err
     }
+}
+
